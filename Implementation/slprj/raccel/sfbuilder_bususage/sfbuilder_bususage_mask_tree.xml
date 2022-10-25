@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/SlsaMaskTree/R2020a">
+  <slsa.mm.maskTree.MaskTree type="slsa.mm.maskTree.MaskTree" uuid="dcb9f603-62b7-4caa-b7bf-ca1a76eb1e22">
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="d29feb56-7e8a-41de-aee9-5db9ea108923">
+      <childrenIds>sfbuilder_bususage:16</childrenIds>
+      <childrenIds>sfbuilder_bususage:17</childrenIds>
+      <childrenIds>sfbuilder_bususage:18</childrenIds>
+      <childrenIds>sfbuilder_bususage:19</childrenIds>
+      <childrenIds>sfbuilder_bususage:7</childrenIds>
+      <id>root</id>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="7b945130-7a02-45cf-a7d5-0a0bd56829f8">
+      <blockPath>sfbuilder_bususage/SubSystem1</blockPath>
+      <id>sfbuilder_bususage:16</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="c92a884b-d91d-4dda-bc9a-b1821ac48c56">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="98226c2b-2df7-49fd-b285-1681eefb8000">
+          <expression>sfbuilder_bus_bus.h</expression>
+          <name>filename</name>
+        </dialogParameters>
+        <initializationCode>x=sfundemo_maskdisp;</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="65d899b8-2516-4693-a287-8cff4f2329bf">
+      <blockPath>sfbuilder_bususage/SubSystem4</blockPath>
+      <id>sfbuilder_bususage:17</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="57e2c415-4b8d-4848-8de7-6eaea4180108">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d051a6d9-f556-4d52-86d0-50b0f1bf6402">
+          <expression>sfbuilder_bus.tlc</expression>
+          <name>filename</name>
+        </dialogParameters>
+        <initializationCode>x=sfundemo_maskdisp;</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="5d8d9eea-c45c-4003-b287-d561d9cb09f4">
+      <blockPath>sfbuilder_bususage/SubSystem5</blockPath>
+      <id>sfbuilder_bususage:18</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="63fa95b4-9fce-4911-8738-c5c79c3f67a5">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="80396c6c-4025-4895-a6a9-54ca96e3733f">
+          <expression>sfbuilder_bus.c</expression>
+          <name>filename</name>
+        </dialogParameters>
+        <initializationCode>x=sfundemo_maskdisp;</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="85604b7c-3c9c-403c-916f-6d923ca5e3f8">
+      <blockPath>sfbuilder_bususage/SubSystem6</blockPath>
+      <id>sfbuilder_bususage:19</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="5a7f8e63-830f-43aa-a56c-954c0acb9634">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="88e62f43-e8c0-475b-bcad-00c29f7ec3b8">
+          <expression>sfbuilder_bus_wrapper.c</expression>
+          <name>filename</name>
+        </dialogParameters>
+        <initializationCode>x=sfundemo_maskdisp;</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="e9f1991b-d7e8-4df5-802d-8fe1107cb7ee">
+      <blockPath>sfbuilder_bususage/S-function Builder/S-Function Builder</blockPath>
+      <id>sfbuilder_bususage:7</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="101aaa5c-6925-4563-859e-2ca1d3cef1cf">
+        <initializationCode>val = [[.9  0.75 0.75 1 1 .9 .9 1]&apos;,[1 1 0.75 0.75 .9 .9 1 .9]&apos;];try , sys = get_param(gcb,&apos;SfunBuilderFcnName&apos;);if isempty(sys), sys = get_param(gcb,&apos;FunctionName&apos;); end,catch, sys = get_param(gcb,&apos;FunctionName&apos;); end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <flags type="slsa.mm.maskTree.MaskTreeFlags" uuid="d0d3f67c-3110-461c-aa27-b7d636070e19"/>
+  </slsa.mm.maskTree.MaskTree>
+</MF0>
